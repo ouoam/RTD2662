@@ -11,8 +11,9 @@
 #define _PCB_RTD2660_DEMO2                      1
 #define _PCB_RTD2660_DEMO3                      2       // TB1338
 #define _PCB_RTD2660_DEMO4                      3       // PCB800168?
+#define _PCB_RTD2660_DEMO5                      4       // PCB800099
 
-#define _PCB_TYPE								_PCB_RTD2660_DEMO2
+#define _PCB_TYPE								_PCB_RTD2660_DEMO5
                                   
 //--------------------------------------------------
 
@@ -30,6 +31,10 @@
 
 #if(_PCB_TYPE == _PCB_RTD2660_DEMO4)
 #include "pcb\Pcb_RTD3580D_LCDTV_DEMO_PCB4.h"
+#endif
+
+#if(_PCB_TYPE == _PCB_RTD2660_DEMO5)
+#include "pcb\Pcb_RTD3580D_LCDTV_DEMO_PCB5.h"
 #endif
 
  
