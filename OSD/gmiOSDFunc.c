@@ -1110,7 +1110,7 @@ void CDoReset(void)
     CAdjustPeakingCoding();
     if(bSourceVideo())
     {
-        gmi_CAdjustVDCHue(GET_HUE());
+        kx_CAdjustVDCHue(GET_HUE());
         CVideoSetSaturation(GET_SATURATION());
     }
     else

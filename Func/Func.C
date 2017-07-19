@@ -79,7 +79,7 @@ void CMuteOff(void)
 void CSetVolume(void)
 {      
 	#if(_IF_PLL_DE_CHIP == _IF_PLL_DE_1338)
-     if (_SOURCE_VIDEO_TV == _GET_INPUT_SOURCE() && !gmi_CModeLocked() && bFM == 0)
+     if (_SOURCE_VIDEO_TV == _GET_INPUT_SOURCE() && !kx_CVideoModeLocked() && bFM == 0)
         return;
 	#endif
 
@@ -403,19 +403,19 @@ void CInitInputSource(void)
 
 	#if(_VIDEO_AV_SUPPORT)
     case _SOURCE_VIDEO_AV:
-        gmi_CSelectInputChannel(_AV_CHANNEL, 0);
+        kx_CSelectVideoChannel(_AV_CHANNEL, 0);
         break;
 	#endif
 
 	#if(_VIDEO_SV_SUPPORT)
     case _SOURCE_VIDEO_SV:
-        gmi_CSelectInputChannel(_SV_CHANNEL, 0);
+        kx_CSelectVideoChannel(_SV_CHANNEL, 0);
         break;
 	#endif
 
 	#if(_VIDEO_TV_SUPPORT)
     case _SOURCE_VIDEO_TV:
-        gmi_CSelectInputChannel(_TV_CHANNEL, 0);
+        kx_CSelectVideoChannel(_TV_CHANNEL, 0);
         CInitTV();
         break;
 	#endif

@@ -480,13 +480,13 @@ void CAdjustCustomerColorMode(void)
 		CAdjustPeakingFilter(GET_PEAKING_CORING());
 		CVideoSetContrast(GET_CONTRAST());
 		CVideoSetSaturation(GET_SATURATION());
-		gmi_CAdjustVDCHue(GET_HUE());		
+		kx_CAdjustVDCHue(GET_HUE());		
 	}
 	#endif
 
 	#if(sRGB_Color_Enhance == _ENABLE)
 	CVideoSetSaturation(GET_SATURATION());
-	gmi_CAdjustVDCHue(GET_HUE());
+	kx_CAdjustVDCHue(GET_HUE());
 	CScalerSetBit(_COLOR_CTRL_62, ~(_BIT2), _BIT2);		// enable sRGB
 	#endif
 }

@@ -25,7 +25,7 @@
 #include "Core\Header\I2c.h"
 
 #include "lib\VideoDec.h"
-#include "lib\Gmifunc.h"
+#include "lib\KXFunc.h"
 #include "Func\Func.H"
 #include "TV\TV.h"
 #include "TV\JS_6B1.H"

@@ -883,7 +883,7 @@ BYTE CAdjustIVS2DVSDelay(BYTE ucOption)
 // Input Value  : ulFreq    --> Target Dclk frequency
 // Output Value : None
 //--------------------------------------------------
-void CAdjustDPLL(DWORD ulFreq)
+void CAdjustDPLL2(DWORD ulFreq)
 {
 /*
     WORD mcode;

@@ -28,7 +28,7 @@ void CVideoInitial(void)
 	CScalerCodeW(VideoInit);
 	CScalerCodeW(VideoAdcInit);
 
-    gmi_CInitialVDC();
+    kx_CInitialVDC();
     CScalerPageSelect(_PAGE8); 
     CScalerSetBit(_P8_VIDEO_CTRL1_A1, ~_BIT0, 0x00);  
     CScalerSetBit(_P8_INOUT_CTRL_A4, ~(_BIT1|_BIT4|_BIT5), _BIT4|_BIT5); // Force Only 4:2:2 Format Output for 3580 !!  
@@ -159,7 +159,7 @@ void CVideoSoftReset(void)
 // Input Value  : saturationNone
 // Output Value : None
 //--------------------------------------------------
-void CVideoSetVDCSaturation(BYTE ucValue)
+void CVideoSetVDCSaturation2(BYTE ucValue)
 {	
 	CScalerPageSelect(_PAGE8);
 	#if(1)
@@ -367,7 +367,7 @@ void CVideoDisplaySet(void)
         bTVSignal = _TV_NO_SIGNAL;
         for(field = 0; field < 10; field++)
         {
-        	if (gmi_CModeLocked())
+        	if (kx_CVideoModeLocked())
             {
                 bTVSignal = _TV_IS_SIGNAL;
                 break;
@@ -477,9 +477,9 @@ void CVideoDisplaySet(void)
 	CModeSetupEtcs(_FUNCTION_DISABLE);
    
     if (ucVideoType == ZNTSC || ucVideoType == ZNTSC_443 || ucVideoType == ZNTSC_50)
-    	gmi_CAdjustVDCHue(GET_HUE());
+    	kx_CAdjustVDCHue(GET_HUE());
     else
-	    gmi_CAdjustVDCHue(50);
+	    kx_CAdjustVDCHue(50);
                                                           
 	if(_GET_INPUT_SOURCE() == _SOURCE_VIDEO_AV && (ucVideoType == ZNTSC_443 || ucVideoType == ZPAL_60))
     {
@@ -555,7 +555,7 @@ void CVideoDisplaySet(void)
 //--------------------------------------------------
 void CSetVideoModeReady(void)
 {
-    gmi_CAdjustVDCHue(50);
+    kx_CAdjustVDCHue(50);
 	CTimerCancelTimerEvent(CModeNoSignalEvent);
 	CTimerCancelTimerEvent(CModeNoCableEvent);
 	CTimerCancelTimerEvent(CModeNoSupportEvent);
@@ -599,7 +599,7 @@ void CVideoProcess(void)
 	switch (ucCurrState) 
 	{
 		case _SEARCH_STATE:	
-			if(gmi_CVideoModeChange())
+			if(kx_CVideoModeDetect())
 			{
                 CSetVideoModeReady();
 			} 
@@ -611,7 +611,7 @@ void CVideoProcess(void)
 			break;
 
 		case _ACTIVE_STATE:
-			if (!gmi_CVideoIsExist())
+			if (kx_CVideoIsChange())
 			{         
 			   	CModeResetMode();  
 				break;
@@ -663,7 +663,7 @@ void CVideoProcess(void)
                 SET_OSD_READYFORDISPLAY();
 			}    
 
-            if (gmi_CModeLocked())
+            if (kx_CVideoModeLocked())
 			{
                 COsdDispOsdTimerEvent();
                 ucTVSyncFailCount = 250;
@@ -672,7 +672,7 @@ void CVideoProcess(void)
 			break;
 
 		case _SLEEP_STATE:
-            if (gmi_CModeLocked())
+            if (kx_CVideoModeLocked())
 			{      
                 ucTVSyncFailCount = 250;
 			   	CModeResetMode();
@@ -690,7 +690,7 @@ void bTVSigChange(void)
 {
     if(_GET_INPUT_SOURCE() == _SOURCE_VIDEO_TV)
     {
-        if (gmi_CModeLocked())
+        if (kx_CVideoModeLocked())
         {     
             if (TVNoSignalCount)    TVNoSignalCount--;
 

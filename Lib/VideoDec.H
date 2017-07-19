@@ -161,22 +161,13 @@
 |___________|_____________|_____________|_____________|__________|__________|__________|__________|__________|__________|
 */
 
-extern void gmi_CI2CWriteVDCByte(const unsigned char ucAddress, const unsigned char ucWriteValue);
-extern unsigned char gmi_CI2CReadVDCByte(const unsigned char ucAddress);
-extern unsigned char gmi_CVideoCurrentColor(bit bMode);
-extern void gmi_CInitialVDC(void);
-extern void gmi_CVDCOutputDisable(void);
-extern bit gmi_CModeLocked(void);
-extern void gmi_CSelectInputChannel(unsigned char ucYCrChannel, unsigned char ucAVOut);
-extern void gmi_CAdjustVDCBrightness(const unsigned char ucVDCBrightness);
-extern void gmi_CAdjustVDCContrast(const unsigned char ucVDCContrast);
-extern void gmi_CAdjustVDCSaturation(const unsigned char ucVDCSaturation);
-extern void gmi_CAdjustVDCHue(const unsigned char ucVDCHue);
-extern void gmi_CSetVDCFreeRunMode(const unsigned char ucMode);
 
-      
-
-
+extern BYTE kx_CSearchVideoMode(bit bMode);
+extern void kx_CInitialVDC(void);
+extern void kx_CVDCOutputDisable(void);
+extern bit kx_CVideoModeLocked(void);
+extern void kx_CSelectVideoChannel(BYTE ucYCrChannel, BYTE ucAVOut);
+extern void kx_CAdjustVDCHue(const BYTE ucVDCHue);
 #endif
 #endif
 

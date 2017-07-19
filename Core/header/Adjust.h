@@ -251,7 +251,7 @@ void CAdjustAdcGainOffset(void);
 void CAdjustBackgroundColor(BYTE ucRed, BYTE ucGreen, BYTE ucBlue);
 void CAdjustColorPalette(BYTE *pColorPaletteArray);
 BYTE CAdjustIVS2DVSDelay(BYTE ucOption);
-void CAdjustDPLL(DWORD ulFreq);
+void CAdjustDPLL2(DWORD ulFreq);
 void CAdjustUpdateCenterData(void);
 bit CAdjustCheckAdcClockRange(WORD usClock, WORD *delta);
 //080324
@@ -324,7 +324,7 @@ extern void CAdjustAdcGainOffset(void);
 extern void CAdjustBackgroundColor(BYTE ucRed, BYTE ucGreen, BYTE ucBlue);
 extern void CAdjustColorPalette(BYTE *pColorPaletteArray);
 extern BYTE CAdjustIVS2DVSDelay(BYTE ucOption);
-extern void CAdjustDPLL(DWORD ulFreq);
+extern void CAdjustDPLL2(DWORD ulFreq);
 extern void CAdjustUpdateCenterData(void);
 extern bit CAdjustCheckAdcClockRange(WORD usClock, WORD *delta);
 //080324

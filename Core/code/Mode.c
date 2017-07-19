@@ -1970,7 +1970,7 @@ void CModeSetDisplay(BYTE ucOption)
 	// Calculate and set display clock frequency
 	((DWORD *) pData)[0] = (DWORD)(stDisplayInfo.DHTotal) * (DWORD)stModeInfo.IHFreq * (DWORD)(stDisplayInfo.DVHeight) / stModeInfo.IVHeight / 10;
 	
-	CAdjustDPLL(((DWORD *) pData)[0]);
+	CAdjustDPLL2(((DWORD *) pData)[0]);
 	
 	// Set DH_TOTAL
 	pData[0] = (HIBYTE(stDisplayInfo.DHTotal - 4) & 0x0f);
@@ -2314,7 +2314,7 @@ void CModeSetFreeRun(void)
     WORD usDEndPos;
 	CMiscDisableDoubleBuffer();			// Disable video graphic input(VGIP) double buffer mode
 	
-   	CAdjustDPLL((DWORD) (Panel[ucPanelSelect]->PixelClock - 10) * 1000);
+   	CAdjustDPLL2((DWORD) (Panel[ucPanelSelect]->PixelClock - 10) * 1000);
 	
 	CScalerSetBit(_VDISP_CTRL_28, ~(_BIT5 | _BIT3 | _BIT1 | _BIT0),	(_BIT5 | _BIT1 | _BIT0));	// Display output normal operation and enable display timing generator
 		

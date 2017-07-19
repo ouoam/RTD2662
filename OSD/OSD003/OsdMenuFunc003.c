@@ -790,7 +790,7 @@ void HueAdjust(BYTE ucMode)
     SET_KEYREPEATENABLE();
     stHueSatData.Hue = ValueInRangeChange(0, 100, stHueSatData.Hue, _NON_LOOP | ucMode);
     if(bSourceVideo())
-        gmi_CAdjustVDCHue(GET_HUE());
+        kx_CAdjustVDCHue(GET_HUE());
     else
         CAdjustYpbprhue(GET_HUE());
     ucOsdEventMsg = _SAVE_EE_HUE_SAT_DATA_MSG;

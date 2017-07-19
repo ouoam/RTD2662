@@ -72,7 +72,7 @@ File 2,5,<.\Core\header\Source.h><Source.h> 0x0
 File 2,5,<.\Core\header\Hdmi.H><Hdmi.H> 0x0 
 File 2,5,<.\Core\header\HdmiModeTable.H><HdmiModeTable.H> 0x0 
 File 2,5,<.\Core\header\Memory.H><Memory.H> 0x0 
-File 2,5,<.\Lib\GmiFunc.h><GmiFunc.h> 0x0 
+File 2,5,<.\Lib\KXFunc.h><KXFunc.h> 0x0 
 File 2,5,<.\Lib\VideoDec.H><VideoDec.H> 0x0 
 File 3,5,<.\Panel\Panel.h><Panel.h> 0x0 
 File 3,5,<.\Panel\PNL_LVDS.h><PNL_LVDS.h> 0x0 
@@ -151,7 +151,11 @@ File 11,1,<.\TV\TN8337.C><TN8337.C> 0x0
 File 11,5,<.\TV\TN8337.H><TN8337.H> 0x0 
 File 11,1,<.\TV\TNJ8355.C><TNJ8355.C> 0x0 
 File 11,5,<.\TV\TNJ8355.H><TNJ8355.H> 0x0 
-File 12,4,<.\Lib\GmiFunc.LIB><GmiFunc.LIB> 0x473A55B2 
+File 12,3,<.\Lib\AV_TV.obj><AV_TV.obj> 
+File 12,3,<.\Lib\RTD2662.obj><RTD2662.obj> 
+File 12,3,<.\Lib\FlashWriteDisable.obj><FlashWriteDisable.obj> 
+File 12,3,<.\Lib\TB1351.obj><TB1351.obj> 
+File 12,3,<.\Lib\TunerFunc.obj><TunerFunc.obj> 
 File 13,1,<.\OSD\gmiOSDFunc.c><gmiOSDFunc.c> 0x0 
 File 13,5,<.\OSD\gmiOSDFunc.h><gmiOSDFunc.h> 0x0 
 File 13,5,<.\Lib\TB1338.H><TB1338.H> 0x0 
