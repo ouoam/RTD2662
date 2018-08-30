@@ -1,1 +1,1 @@
-CreateBin.exe BIN\Flash.bin BIN\RTD2662.H00 BIN\RTD2662.H01
+CreateBin.exe Firmware.bin Output\RTD2662.H00 Output\RTD2662.H01
