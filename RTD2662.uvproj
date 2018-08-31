@@ -787,6 +787,11 @@
               <FileType>5</FileType>
               <FilePath>.\Panel\PNL_TTL.h</FilePath>
             </File>
+            <File>
+              <FileName>PNL_TTL_102WVA0202_3.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Panel\PNL_TTL_102WVA0202_3.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -816,6 +821,11 @@
               <FileName>Pcb_RTD3580D_LCDTV_DEMO_PCB4.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\PCB\Pcb_RTD3580D_LCDTV_DEMO_PCB4.h</FilePath>
+            </File>
+            <File>
+              <FileName>Pcb_RTD3580D_LCDTV_DEMO_PCB5.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\PCB\Pcb_RTD3580D_LCDTV_DEMO_PCB5.h</FilePath>
             </File>
           </Files>
         </Group>
