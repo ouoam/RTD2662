@@ -5,6 +5,8 @@ This project contains source code for a firmware that is compatible with the PCB
 ## Building
 To build, use Keil uVision 5 or higher. The project should compile cleanly.
 
+NOTE: If you're experiencing errors, try running case_insensitive.ps1 in PowerShell. This should make the project and its subdirectories case-insensitive. Hopefully this will not be required in the future.
+
 ## Obtaining a License for Keil uVision PDK
 [Take a look at Silicon Labs' website](https://www.silabs.com/products/development-tools/software/8-bit-8051-microcontroller-software#keil), go to the section for Keil PK51 Developer's Kit, and click "Register Now", after downloading the software.
 
