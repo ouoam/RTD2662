@@ -2,3 +2,4 @@ Output/
 bin/
 RTD2662.uvgui.*
 Firmware.bin
+*.log
